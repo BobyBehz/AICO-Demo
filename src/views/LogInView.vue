@@ -1,25 +1,34 @@
 <template>
-    <div class=" bg-gradient-to-tr from-blue-400 to-green-600 w-[100vw] h-[100vh] pt-[30%] md:pt-[10%]">
+    <div class="w-[100vw] h-[100vh] flex text-white">
         <LoadingModal v-if="isLoading" />
-        <div class="container">
+        <div class="h-[100vh] w-[50vw] bg-gradient-to-tl from-purple-950 to-blue-900">
             <div
-                class="w-[300px] px-8 bg-white p-3 flex flex-col items-center md:w-[400px] m-auto aspect-square rounded-lg shadow-lg">
-                <h1 class="md:text-xl text-base font-bold mb-10">ورود به پنل کاربری</h1>
-                <div class="w-full mb-3">
-                    <span class="w-full text-sm md:text-base text-right block pb-2">نام کاربری خود را وارد کنید</span>
-                    <LogInput v-model="userInfo.userName" placeHolder="نام کاربری" />
-                    <span v-if="$v.userName.$error" class="text-red-600 text-sm md:text-base">{{ $v.userName.$errors[0].$message
+                class="w-2/3 flex flex-wrap m-auto pt-[20%]">
+                <h1 class="basis-full font-bold text-5xl mb-12">ورود به بخش کارفرمایان</h1>
+                <div class="w-full mb-7">
+                    <span class="w-full text-2xl mb-3 block pb-2">- ایمیل / نام کاربری</span>
+                    <div class="bg-blue-900">
+                        <LogInput v-model="userInfo.userName" placeHolder="نام کاربری" type="text" name="text" class=" outline-none bg-white bg-opacity-20 w-full h-14 rounded-lg pr-2 pb-1 placeholder-white placeholder-opacity-100"/>
+                    </div>
+                    <span v-if="$v.userName.$error" class="text-red-400 mt-1 block text-sm md:text-base">{{
+                        $v.userName.$errors[0].$message
                     }}</span>
                 </div>
-                <div class="w-full mb-3">
-                    <span class="w-full text-sm md:text-base text-right block pb-2">پسورد خود را وارد کنید</span>
-                    <LogInput v-model="userInfo.passWord" placeHolder="رمز عبور" />
-                    <span v-if="$v.passWord.$error" class="text-red-600 text-sm md:text-base">{{ $v.passWord.$errors[0].$message
+                <div class="w-full mb-7">
+                    <span class="w-full text-2xl mb-3 block pb-2">- گذرواژه</span>
+                    <div class="bg-blue-900">
+                        <LogInput v-model="userInfo.passWord" placeHolder="رمز عبور" type="password" name="password" class=" outline-none bg-white bg-opacity-20 w-full h-14 rounded-lg pr-2 pb-1 placeholder-white placeholder-opacity-100"/>
+                    </div>
+                    <span v-if="$v.passWord.$error" class="text-red-400 mt-1 block text-sm md:text-base">{{
+                        $v.passWord.$errors[0].$message
                     }}</span>
                 </div>
                 <button @click="submit"
-                    class="bg-green-400 mt-7 border rounded-lg text-sm md:text-base border-green-500 w-full h-8 pb-1">ورود</button>
+                    class="bg-white text-black mt-7 font-semibold text-3xl rounded-lg w-full h-14 pb-3 hover:-translate-y-1 duration-200">ورود</button>
             </div>
+        </div>
+        <div class="h-[100vh] w-[50vw]">
+    
         </div>
     </div>
 </template>
@@ -70,6 +79,4 @@ const submit = async () => {
 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
