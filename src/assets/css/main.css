@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'iranyekan';
+    src: url('../fonts/iranyekanwebregular.woff');
+}
+body {
+    font-family: 'iranyekan';
+}

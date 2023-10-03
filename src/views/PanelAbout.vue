@@ -1,6 +1,6 @@
 <template>
     <div>
-        sub hereeeee
+        صفحه درباره ما
     </div>
 </template>
 
