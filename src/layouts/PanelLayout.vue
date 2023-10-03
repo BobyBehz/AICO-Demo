@@ -1,11 +1,11 @@
 <template>
-    <div class="flex overflow-hidden">
-        <aside class="basis-1/6 h-screen custom-aside-bg text-white relative">
+    <div class="flex h-screen overflow-hidden">
+        <aside class="basis-1/5 xl:basis-1/6 custom-aside-bg text-white relative">
             <div class="flex justify-center items-center gap-2 mt-10">
                 <img class="w-8 h-8" src="../assets/images/dashboard-icon.png" alt="">
                 <h1 class="text-2xl font-semibold">پنل کاربری</h1>
             </div>
-            <nav class="flex flex-wrap gap-3 pr-[30%] mt-10">
+            <nav class="flex flex-wrap gap-3 pr-[20%] xl:pr-[30%] mt-10">
                 <RouterLink v-for="child in panelRoutes"
                     class="basis-full flex items-center gap-2 hover:text-blue-800 hover:scale-105 ease-in-out duration-200"
                     :to="child.path">
@@ -20,14 +20,14 @@
                 </RouterLink>
             </nav>
             <footer class="flex justify-center flex-wrap gap-3 absolute bottom-0 pb-3">
-                <span class="text-xs">تمام حقوق مادی و معنوی این برنامه محفوظ است.</span>
+                <span class="text-xs text-center">تمام حقوق مادی و معنوی این برنامه محفوظ است.</span>
                 <div class=" w-20 h-20 rounded-full">
                     <img class="w-full h-full rounded-full object-cover object-center" src="../assets/images/AICO-logo.png"
                         alt="">
                 </div>
             </footer>
         </aside>
-        <main class="basis-5/6 bg-gray-100">
+        <main class="basis-4/5 xl:basis-5/6 bg-gray-100">
             <header class="bg-white flex items-center gap-4 border-b border-blue-900 px-10 pt-8 pb-4">
                 <div class="text-2xl font-semibold grow">
                     پنل کاربری
