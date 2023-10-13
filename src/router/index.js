@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LogInView from '../views/LogInView.vue'
 import PanelLayout from '../layouts/PanelLayout.vue'
-import PanelAbout from '../views/PanelAbout.vue'
+// import PanelAbout from '../views/PanelAbout.vue'
 import PanelHome from '../views/PanelHome.vue'
 
 const router = createRouter({
@@ -38,14 +38,14 @@ const router = createRouter({
           },
           component: PanelHome,
         },
-        {
-          path: '/panel/about',
-          name: 'about',
-          meta: {
-            breadCrumb: 'درباره ی ما'
-          },
-          component: PanelAbout,
-        }
+        // {
+        //   path: '/panel/about',
+        //   name: 'about',
+        //   meta: {
+        //     breadCrumb: 'درباره ی ما'
+        //   },
+        //   component: PanelAbout,
+        // }
       ]
     },
   ]

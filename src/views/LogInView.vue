@@ -78,8 +78,8 @@ import 'vue3-toastify/dist/index.css';
 const passwordInputType = ref('password')
 const isLoading = ref(false)
 const userAccount = {
-    userName: 'XGroup',
-    passWord: 'kickass'
+    userName: 'admin',
+    passWord: '123'
 }
 sessionStorage.setItem('userPassword', userAccount.passWord)
 console.log(sessionStorage)
