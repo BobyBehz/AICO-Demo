@@ -6,9 +6,10 @@
                 <h1 class="basis-full font-bold text-2xl lg:text-4xl 2xl:text-5xl mb-12">ورود به بخش کارفرمایان</h1>
                 <div class="w-full mb-7">
                     <span class="w-full text-lg lg:text-2xl mb-3 block pb-2">- ایمیل / نام کاربری</span>
-                    <div class="bg-blue-900">
+                    <div class="bg-blue-900 relative rounded-lg">
+                        <svg class="absolute right-[1%] top-[26%] w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="4" stroke="#ffffff" stroke-width="1.5"></circle> <path d="M20 17.5C20 19.9853 20 22 12 22C4 22 4 19.9853 4 17.5C4 15.0147 7.58172 13 12 13C16.4183 13 20 15.0147 20 17.5Z" stroke="#ffffff" stroke-width="1.5"></path> </g></svg>
                         <LogInput v-model="userInfo.userName" placeHolder="نام کاربری" type="text" name="text"
-                            :class="['outline-none bg-white bg-opacity-20 w-full h-10 lg:h-12 xl:h-14 rounded-lg pr-2 pb-1 placeholder-white placeholder-opacity-100', $v.userName.$error ? 'border border-red-600' : '']" />
+                            :class="['outline-none bg-white bg-opacity-20 w-full h-10 lg:h-12 xl:h-14 rounded-lg pr-10 pb-1 placeholder-white placeholder-opacity-100', $v.userName.$error ? 'border border-red-600' : '']" />
                     </div>
                     <span v-if="$v.userName.$error" class="text-red-400 mt-1 block text-sm md:text-base">{{
                         $v.userName.$errors[0].$message
@@ -16,9 +17,10 @@
                 </div>
                 <div class="w-full mb-7">
                     <span class="w-ful text-lg lg:text-2xl mb-3 block pb-2">- گذرواژه</span>
-                    <div class="bg-blue-900 relative">
+                    <div class="bg-blue-900 relative rounded-lg">
+                        <svg class="absolute right-[1%] top-[26%] w-7 h-6" fill="white" height="200px" width="200px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M16,16.8l13.8-9.2C29.2,5.5,27.3,4,25,4H7C4.7,4,2.8,5.5,2.2,7.6L16,16.8z"></path> </g> <g> <path d="M16.6,18.8C16.4,18.9,16.2,19,16,19s-0.4-0.1-0.6-0.2L2,9.9V23c0,2.8,2.2,5,5,5h18c2.8,0,5-2.2,5-5V9.9L16.6,18.8z"></path> </g> </g> </g></svg>
                         <LogInput v-model="userInfo.passWord" placeHolder="رمز عبور" :type="passwordInputType" name="password"
-                            :class="['outline-none bg-white bg-opacity-20 w-full h-10 lg:h-12 xl:h-14 rounded-lg pr-2 pb-1 placeholder-white placeholder-opacity-100', $v.passWord.$error ? 'border border-red-600' : '']" />
+                            :class="['outline-none bg-white bg-opacity-20 w-full h-10 lg:h-12 xl:h-14 rounded-lg pr-10 pb-1 placeholder-white placeholder-opacity-100', $v.passWord.$error ? 'border border-red-600' : '']" />
                         <button @click="togglePasswordInputType" :class="['w-8 absolute left-[2%] top-[20%] focus:outline-none hover:scale-110 duration-200', passwordInputType === 'password' ? 'opacity-30' : '']">
                             <svg fill="#ffffff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 442.04 442.04" xml:space="preserve"
